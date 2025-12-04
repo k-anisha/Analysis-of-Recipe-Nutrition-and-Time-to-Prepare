@@ -4,5 +4,3 @@ This is a final project for DSC 80 at UCSD!
 test test
 
 boom
-
-print(minutes_nutrition[['minutes', 'nutrition', 'healthy']].head().to_markdown(index=False))
