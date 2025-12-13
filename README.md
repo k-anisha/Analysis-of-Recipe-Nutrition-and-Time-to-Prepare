@@ -29,7 +29,20 @@ There are two datasets to consider here, `recipe` and `rating.` Let's take a loo
 | `'ingredients'`    | A list of the ingredients for the recipe. (list of `str`)                                                                                                                                                                      |
 | `'n_ingredients'`  | The number of ingredients in the recipe. (`int`)                                                                                                                                                              |
 
+`rating` has 731,927 rows and 5 columns.
 
+| Column        | Description         |
+| :------------ | :------------------ |
+| `'user_id'`   | The unique identifer of the user who posted the review. (`int`)             |
+| `'recipe_id'` | The recipe's unique identifier, same as `recipes`. (`int`)            |
+| `'date'`      | The date the rating was posted. (`str`)   |
+| `'rating'`    | The rating the user gave the recipe, 0-5, inclusive. (`int`)         |
+| `'review'`    | The user's review. (`str`)        |
+
+
+Since `rating` has many more rows than `recipe,` this means many recipes likely have multiple ratings. In order to see both the recipes and ratings together in one dataframe, we can merge them on a common column-here, we can use `id` (in `recipes`) and `recipe_id` (in `ratings`) as the columns to merge on.
+
+Since we don't know if every recipe has at least one rating, however, so we'll make sure to use the parameter `how = 'left'` during the merge to keep all the recipes from the `recipes` dataframe.
 
 # Data Cleaning and Exploratory Data Analysis
 
