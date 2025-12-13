@@ -39,6 +39,7 @@ There are two datasets to consider here, `recipe` and `rating.` Let's take a loo
 | `'rating'`    | The rating the user gave the recipe, 0-5, inclusive. (`int`)         |
 | `'review'`    | The user's review. (`str`)        |
 
+# Data Cleaning and Exploratory Data Analysis
 
 Since `rating` has many more rows than `recipe,` this means many recipes likely have multiple ratings. In order to see both the recipes and ratings together in one dataframe, we can merge them on a common column-here, we can use `id` (in `recipes`) and `recipe_id` (in `ratings`) as the columns to merge on.
 
@@ -46,7 +47,7 @@ Since we don't know if every recipe has at least one rating, however, so we'll m
 
 Below is the first 5 rows of the merged dataframe, which initially has 243,429 rows and 17 columns. Since there are many columns I have just kept and displayed the ones most relevant to this project.
 
-As per the instructions, I filled all ratings on 0 with np.nan. Since ratings are usually on a scale of 1-5 (inclusive), a rating of 0 suggests that the user just didn't input a rating. To avoid bias in the ratings, the value has been filled with 0. Additionally, an `average_rating` column has been added, containing the average rating per recipe. Since a recipe has many ratings from several users, the average of all ratings can show us the general approval of a given recipe. Since the `nutrition` column is actually a string and not a list, I have changed every value to a list by looping through every value in the series, splitting the string, and changing it to a float. 
+As per the instructions, I filled all ratings on 0 with np.nan. Since ratings are usually on a scale of 1-5 (inclusive), a rating of 0 suggests that the user just didn't input a rating. To avoid bias in the ratings, the value has been filled with 0. Additionally, an `average_rating` column has been added, containing the average rating per recipe. Since a recipe has many ratings from several users, the average of all ratings can show us the general approval of a given recipe. Since the `nutrition` column is actually a string and not a list, I have changed every value to a list by looping through every value in the series, splitting the string, and changing it to a float. This allows me to later create plots with the data, or look at aggregate statistics for nutrients.
 
 | name                                 | minutes | nutrition             | n_steps | n_ingredients | rating | review                               | rating_avg |
 |:------------------------------------|--------:|:--------------------|--------:|---------------:|-------:|:------------------------------------|-----------:|
@@ -56,9 +57,13 @@ As per the instructions, I filled all ratings on 0 with np.nan. Since ratings ar
 | 412 broccoli casserole               |      40 | [194.8, 20.0, 6.0...|       6 |              9 |      5 | The photos you took (shapeweaver)...|           5.0 |
 | 412 broccoli casserole               |      40 | [194.8, 20.0, 6.0...|       6 |              9 |      5 | Thanks so much for sharing...       |           5.0 |
 
+<iframe
+  src="assets/minutes_hist.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
-
-# Data Cleaning and Exploratory Data Analysis
 
 # Assessment of Missingness
 
