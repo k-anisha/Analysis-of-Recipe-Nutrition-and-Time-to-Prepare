@@ -50,11 +50,11 @@ As per the instructions, I filled all ratings on 0 with np.nan. Since ratings ar
 
 | name                                 | minutes | nutrition             | n_steps | n_ingredients | rating | review                               | rating_avg |
 |:------------------------------------|--------:|:--------------------|--------:|---------------:|-------:|:------------------------------------|-----------:|
-| 1 brownies in the world ...          |      40 | [138.4, 10.0, 50.0...|      10 |              9 |      4 | These were pretty good, but...      |          4 |
-| 1 in canada chocolate chip ...       |      45 | [595.1, 46.0, 211...|      12 |             11 |      5 | Originally I was gonna cut...       |          5 |
-| 412 broccoli casserole               |      40 | [194.8, 20.0, 6.0...|       6 |              9 |      5 | This was one of the best...         |          5 |
-| 412 broccoli casserole               |      40 | [194.8, 20.0, 6.0...|       6 |              9 |      5 | The photos you took (shapeweaver)...|           |
-| 412 broccoli casserole               |      40 | [194.8, 20.0, 6.0...|       6 |              9 |      5 | Thanks so much for sharing...       |           |
+| 1 brownies in the world ...          |      40 | [138.4, 10.0, 50.0...|      10 |              9 |      4 | These were pretty good, but...      |          4.0 |
+| 1 in canada chocolate chip ...       |      45 | [595.1, 46.0, 211...|      12 |             11 |      5 | Originally I was gonna cut...       |          5.0 |
+| 412 broccoli casserole               |      40 | [194.8, 20.0, 6.0...|       6 |              9 |      5 | This was one of the best...         |          5.0 |
+| 412 broccoli casserole               |      40 | [194.8, 20.0, 6.0...|       6 |              9 |      5 | The photos you took (shapeweaver)...|           5.0 |
+| 412 broccoli casserole               |      40 | [194.8, 20.0, 6.0...|       6 |              9 |      5 | Thanks so much for sharing...       |           5.0 |
 
 
 
